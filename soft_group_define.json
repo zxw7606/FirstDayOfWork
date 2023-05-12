@@ -58,6 +58,71 @@
 			"groups": [
 				"Android_FULL_Environment"
 			]
+		},
+		{
+			"name": "vscode",
+			"groups": [
+				"group.Web-Front-End"
+			]
+		},
+		{
+			"name": "vscode",
+			"groups": [
+				"group.Web-Front-End"
+			]
+		},
+		{
+			"name": "nvm",
+			"groups": [
+				"group.Web-Front-End"
+			]
+		},
+		{
+			"name": "wechatdevtools",
+			"groups": [
+				"group.Web-Front-End"
+			]
+		},
+		{
+			"name": "feishu",
+			"groups": [
+				"group.Office",
+				"group.Office(ByteDance series kit)"
+			]
+		},
+		{
+			"name": "WechatWork",
+			"groups": [
+				"group.Office",
+				"group.Office(Tecent series kit)"
+			]
+		},
+		{
+			"name": "wechat",
+			"groups": [
+				"group.Office",
+				"group.Office(Tecent series kit)"
+			]
+		},
+		{
+			"name": "dingtalk",
+			"groups": [
+				"group.Office",
+				"group.Office(Ali series kit)"
+			]
+		},
+		{
+			"name": "dingtalk",
+			"groups": [
+				"group.Office",
+				"group.Office(Ali series kit)"
+			]
+		},
+		{
+			"name": "MicrosoftVisualStudioCommunity2022-Install",
+			"groups": [
+				"group.C/C++"
+			]
 		}
 	]
 }
