@@ -1,0 +1,14 @@
+{
+	"main": {
+		"INPUT_OPERATOR": "Please select the operation to perform (input number)",
+		"INSTALL_SCOOP": "Install Scoop",
+		"INSTALL_SOFT": "Install software",
+		"INSTALL_QUIT": "Quit",
+		"INVALID_INPUT": "Invalid option, please try again",
+		"INPUT_OPERATOR_NO": "Please enter the option number",
+		"INPUT_GROUP_NO": "Please select the software group to install (input number)"
+	},
+	"group": {
+		"JAVA_1.8_FULL_Environment": "JAVA 1.8 Full Environment"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"main": {
+		"INPUT_OPERATOR":"请选择要执行的操作（输入序号）",
+		"INSTALL_SCOOP":"安装 Scoop",
+		"INSTALL_SOFT":"安装软件",
+		"INSTALL_QUIT":"退出",
+		"INVALID_INPUT":"无效的选项，请重新输入",
+		"INPUT_OPERATOR_NO":"请输入选项编号",
+		"INPUT_GROUP_NO":"请选择要安装的软件分组（输入序号）"
+
+	},
+	"group": {
+		"JAVA_1.8_FULL_Environment": "JAVA 1.8全套环境"
+	}
+}

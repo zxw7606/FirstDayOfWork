@@ -1,0 +1,47 @@
+name: Update Group And Speed-Up
+
+on:
+  push:
+    branches: [ master ]
+    paths: 
+      - 'bin/**'
+      - '.github/**'
+      - 'soft_group_define.json'
+  schedule:
+    - cron: '0 0/12 * * *'
+
+jobs:
+  Update-Groups-File:
+    name: WindowsPowerShell
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: 'master'
+          fetch-depth: 2
+      - name: Cache modules
+        id: psmodulecache
+        uses: potatoqualitee/psmodulecache@v5.2
+        with:
+          shell: powershell
+          modules-to-cache: sqlite
+      - name: Install-Scoop-Search-Directory
+        shell: powershell
+        run: |
+          Invoke-WebRequest -Uri "https://rasa.github.io/scoop-directory/scoop_directory.db" -OutFile "$env:USERPROFILE\scoop_directory.db"      
+      - name: Gene-group-files
+        shell: powershell
+        run: |
+          ./bin/gene_group.ps1
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "schedule update group info"
+      - name: auto_update
+        shell: powershell
+        run: |
+          ./bin/auto_update.ps1
+          git add .
+          git commit -m "auto update speed up"
+          git push      

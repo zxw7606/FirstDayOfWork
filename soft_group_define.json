@@ -1,0 +1,51 @@
+{
+	"metadata": {
+		"type": "define",
+		"last_updated": "1111111111",
+		"version": "0.1"
+	},
+	"software_list": [
+		{
+			"name": "maven",
+			"groups": [
+				"group.JAVA_1.8_FULL_Environment"
+			]
+		},
+		{
+			"name": "temurin8-jdk@8.0.372-7",
+			"groups": [
+				"group.JAVA_1.8_FULL_Environment"
+			]
+		},
+		{
+			"name": "idea-ultimate",
+			"groups": [
+				"group.JAVA_1.8_FULL_Environment"
+			]
+		},
+		{
+			"name": "tomcat9",
+			"groups": [
+				"group.JAVA_1.8_FULL_Environment"
+			]
+		},
+		{
+			"name": "aria2",
+			"groups": [
+				"downloader"
+			]
+		},
+		{
+			"name": "android-studio",
+			"groups": [
+				"Android_FULL_Environment"
+			]
+		},
+		{
+			"name": "android-clt",
+			"groups": [
+				"Android_FULL_Environment"
+			]
+		}
+	]
+}
