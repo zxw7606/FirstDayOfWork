@@ -213,16 +213,6 @@ function Install-Software {
     }
     $groupIdx = Read-Host $I18N_HELPER.parse("main.INPUT_GROUP_NO")
     $selectedGroup = $softwareGroups[$groupIdx]
-
-    $bucketsToInstall = $selectedGroup.buckets;
-
-    for ($i = 0; $i -lt $bucketsToInstall.Count; $i++) {
-        $bucket = $bucketsToInstall[$i]
-        $name = $bucket.name
-        Write-Output "Begin add bucket $name"
-        Write-Progress -Activity "Installing Group Buckets " -Status "Add... $name" -PercentComplete (($i / $bucketsToInstall.Count) * 100)
-        scoop bucket add "$bucket"
-    }
     
     #ç¡®è®¤æ˜¯å¦å®‰è£…æ‰€é€‰åˆ†ç»„çš„æ‰€æœ‰è½¯ä»¶
     $softwareToInstall = $selectedGroup.software_list
@@ -235,7 +225,10 @@ function Install-Software {
         $version = $software.version
 
         Write-Progress -Activity "Installing Group Softs " -Status "Install... $($software.name)" -PercentComplete (($i / $softwareToInstall.Count) * 100)
-        Write-Output "Begin add bucket $name $bucket_url"
+        if($bucket.Contains("/")){
+            $bucket = $bucket.split("/")[1]
+        }
+        Write-Output "Begin add bucket $bucket $bucket_url"
         scoop bucket add "$bucket" "$bucket_url"
         Write-Output "Begin install $name@$version"
         scoop install "$name@$version"
